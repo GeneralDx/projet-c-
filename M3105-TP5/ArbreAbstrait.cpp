@@ -137,3 +137,13 @@ int NoeudInstPour::executer() {
 
     return 0;
 }
+
+NoeudInstEcrire::NoeudInstEcrire(Noeud* chaine)
+: m_chaine(chaine) {
+}
+
+int NoeudInstEcrire::executer() {
+    cout<<((SymboleValue*) m_chaine)->getChaine();
+  return 0; // La valeur renvoyée ne représente rien !
+  
+}

@@ -134,4 +134,17 @@ class NoeudInstPour : public Noeud {
     Noeud*  m_sequence;
 };
 
+class NoeudInstEcrire : public Noeud {
+    // Classe pour représenter un noeud "instruction tantque"
+//  et ses 2 fils : la condition du tantque et la séquence d'instruction associée
+  public:
+    NoeudInstEcrire(Noeud* chaine);
+     // Construit une "instruction tantque" avec sa condition et sa séquence d'instruction
+   ~NoeudInstEcrire() {} // A cause du destructeur virtuel de la classe Noeud
+    int executer();  // Exécute l'instruction tantque : tantque condition vraie on exécute la séquence
+
+  private:
+    Noeud*  m_chaine;
+};
+
 #endif /* ARBREABSTRAIT_H */
