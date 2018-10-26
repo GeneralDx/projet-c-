@@ -223,11 +223,26 @@ Noeud* Interpreteur::instPour() {
     testerEtAvancer("finpour");
     return new NoeudInstPour(affectationDeb,conditionArret,affectationFin,sequence); 
 }
-
-Noeud* Interpreteur::instEcrire() {
-  testerEtAvancer("ecrire");
-  testerEtAvancer("(");
-  Noeud* var= expression();
-  testerEtAvancer(")");
-  return new NoeudInstEcrire(var);
-}
+/*
+Noeud* Interpreteur::instLire() {
+    Noeud* noeudv1;
+    Noeud* noeudv2;
+    vector<Noeud*> noeudv;
+    testerEtAvancer("lire");
+    testerEtAvancer("(");
+    if(m_lecteur.getSymbole()=="<VARIABLE>"){
+        noeudv1=m_table.chercheAjoute(m_lecteur.getSymbole());
+        noeudv.push_back(noeudv1);
+        
+    }
+    while(m_lecteur.getSymbole()==",")){
+        if(m_lecteur.getSymbole()==","){
+            noeudv2=m_table.chercheAjoute(m_lecteur.getSymbole());
+            
+        }
+        
+    }
+    testerEtAvancer(")");
+    testerEtAvancer(";");
+}*/
+ 

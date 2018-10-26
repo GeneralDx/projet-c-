@@ -39,6 +39,7 @@ private:
     Noeud*  instRepeter(); //<instRepeter> ::= repeter <seqInst> jusqua( <expression> )
     Noeud*  instPour();    //<instPour>    ::=pour( [ <affectation>  ; <expression>  <affectation> ]) <seqInst> finpour
     Noeud*  instEcrire();
+    Noeud*  instLire();
     // outils pour simplifier l'analyse syntaxique
     void tester (const string & symboleAttendu) const throw (SyntaxeException);   // Si symbole courant != symboleAttendu, on lève une exception
     void testerEtAvancer(const string & symboleAttendu) throw (SyntaxeException); // Si symbole courant != symboleAttendu, on lève une exception, sinon on avance
